@@ -1,20 +1,22 @@
-package strings;
-import java.util.*;
 /*---Approach---*/
 /*
- * Problem Statement:
- * Return the length of the longest substring with unique characters.
+ * Problem Statement: (LC:3)
+ * ->Return the length of the longest substring with unique characters.
  *
  * ---Constraints---
- * 0 <= s.length <= 5 * 10^4
- * s consists of English letters, digits, symbols, and spaces.
+ *  0 <= s.length <= 5 * 10^4
+ *  s consists of English letters, digits, symbols, and spaces.
  *
  * ---Approaches---
- * Brute Force:
+ * ->Brute Force:
+ *  Time Complexity: O(n ^ 3) // two loop for checking all substring and one loop for checking uniqueness
+ *  Space Complexity: O(n ^ 2) // two store all the possible substrings
  * - A simple solution would be to generate all substrings of the string and check whether any of them contains repeating characters.
  * - However, this solution is inefficient (O(n^2)) for large strings, as the length can be up to 5 * 10^4, as stated in the constraints.
  *
- * Optimized Approach (sliding window & HashMap):
+ * ->Optimized Approach (sliding window & HashMap):
+ *  Time Complexity: O(n) // one pass for sliding window(max twice visit per element)
+ *  Space Complexity: O(n) // to store the key-value in hashmap to check uniqueness.
  * - Using the sliding window technique, we can solve the problem in a single pass.
  * - The approach is simple: we need to loop through each element using the right pointer. The HashMap will keep track of all elements and their indices.
  * - If we haven't encountered the same character before, we continue normally and store the count as `right - left + 1` (since indices start from 0).
@@ -78,6 +80,8 @@ import java.util.*;
  *    - Explanation: The longest substring without repeating characters is `"abc"`, which has length 3, even though other substrings have repeating characters.
  */
 
+package strings;
+import java.util.*;
 public class LongestUniqueSubstring {
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring("abcacb"));
