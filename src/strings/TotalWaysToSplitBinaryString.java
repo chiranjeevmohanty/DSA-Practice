@@ -162,7 +162,7 @@ public class TotalWaysToSplitBinaryString {
     //most optimal approach
     static int numWays2(String s) {
         int MOD = 1_000_000_007;
-        List<Integer> ones = new ArrayList<>(s.length());
+        List<Integer> ones = new ArrayList<>();
         //counting total no of 1's.
         for(int i = 0; i < s.length(); i++){
             if(s.charAt(i) == '1'){
