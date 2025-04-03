@@ -80,7 +80,6 @@
 
 package recursion;
 
-//iterative approach
 public class KthBitInBinaryNumber {
     public static void main(String[] args) {
         System.out.println( findKthBitRecursive(3, 5));
@@ -89,6 +88,7 @@ public class KthBitInBinaryNumber {
         String s = getBinaryNumber(n);
         return s.charAt(s.length() - k);
     }
+    //iterative approach
     static String getBinaryNumber(int n){
         StringBuilder res = new StringBuilder("0");
         for(int i = 0; i < n - 1; i++){
@@ -106,6 +106,7 @@ public class KthBitInBinaryNumber {
         return res.toString();
     }
 
+    //recursive approach
     static char findKthBitRecursive(int n, int k) {
         return getKthBit(n, k);
     }
