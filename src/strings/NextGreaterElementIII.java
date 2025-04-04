@@ -17,15 +17,14 @@
  * ->Optimized Approach (Next Lexicographical Permutation):
  *  Time Complexity: O(n) // one iteration, swap and reverse max we are traversing two times in the number.
  *  Space Complexity: O(n) // For the char array
- * - Thing to notice here is: to get the closest permutation which is greater than the number itself, we can say we have to consider from right as they have less significant.
- * - If the number is completely decreasing then there will be no answer cos it's already the biggest permutation (e.g. 987654321).
- * - 1st we have to find a point where there is a violation. (e.g. 9879321, violation point is 7).
- * - we can run a while loop or for loop to get the point where its violated. The condition should look like this. if(arr[i] < arr[i+1]). then i is our pivot index.
- * - next step would be to search the index which we can swap with the pivot we have.
- * - One thing we can notice if we swap the smallest element which is lying after the pivot we will get close.
- * - After swapping as we know after the pivot its in decreasing order if we will reverse it we will get the closest permutation which is greater than the current no here we got the answer.
- * - As mention in the problem if the permutation values goes out of int value we have to return -1.
- * - To solve this we can simply store the answer in long, and then we can compare it with Integer.MAX_VALUE. if it's greater than this we will return -1 or else we will return number itself by type casting it to int.
+ * -  If the number is completely in decreasing order, then no greater permutation exists because it's already the largest permutation (e.g., 987654321).
+ * - The first step is to find the point where the order is violated (i.e., a smaller digit appears before a larger digit when traversing from right to left).
+ *   For example, in `9879321`, the violation point is `7` (at index i).
+ * - To find this pivot point, we can use a `while` or `for` loop to check where `arr[i] < arr[i+1]`.The index `i` where this condition holds is our pivot index.
+ * - Next, we need to find the smallest element **greater than** `arr[i]` in the right sub-array to swap with. This ensures we get the smallest possible number that is greater than the current one.
+ * - After swapping, we notice that the digits after the pivot are in decreasing order. Reversing this part will give the closest next greater permutation.
+ * - As mentioned in the problem, if the new number exceeds `Integer.MAX_VALUE`, we return `-1`.
+ * - To handle this, we can store the result in a `long`, compare it with `Integer.MAX_VALUE`, and return `-1` if it exceeds the limit. Otherwise, we return the number itself by typecasting it to `int`.
  */
 
 /*---Corner Cases---*/
