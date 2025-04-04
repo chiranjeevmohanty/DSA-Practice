@@ -19,8 +19,8 @@
  * - it will be valid for small numbers though.
  *
  * ->Optimized Approach (recursion):
- *  Time Complexity: O(log(n)) // recursively we will get the power with modulo of 10^9+7
- *  Space Complexity: O(1) // we are storing some variables
+ *  Time Complexity: O(log n) // recursively we will get the power with modulo of 10^9+7
+ *  Space Complexity: O(log n) // for the call stack
  * - Thing to notice that when we are getting the power value why can't we get the modulo value from each step this way we can avoid loss of precision error.
  * - Recursively we can get the power of some number and while getting the result in each step we can get the modulo value.
  */
