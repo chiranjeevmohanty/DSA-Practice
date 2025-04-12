@@ -5,7 +5,7 @@
  * Return the length of the longest substring containing the same letter you can get after performing the above operations.
  *
  * ---Constraints---
- * 1 <= s.length <= 105
+ * 1 <= s.length <= 10^5
  * s consists of only uppercase English letters.
  * 0 <= k <= s.length
  *
