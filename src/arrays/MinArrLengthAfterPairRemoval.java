@@ -8,8 +8,8 @@
  * Return the minimum length of nums after applying the operation zero or more times.
  *
  * ---Constraints---
- *  1 <= nums.length <= 105
- * 1 <= nums[i] <= 109
+ *  1 <= nums.length <= 10^5
+ * 1 <= nums[i] <= 10^9
  * nums is sorted in non-decreasing order.
  *
  * ---Approaches---
