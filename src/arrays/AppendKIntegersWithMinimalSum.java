@@ -63,7 +63,30 @@ import java.util.*;
 public class AppendKIntegersWithMinimalSum {
     public static void main(String[] args) {
         System.out.println(minimalKSum(new int[]{1, 1, 1, 4}, 6));
+        System.out.println(strStr("sadbutsad", "sad"));
     }
+
+    static int strStr(String haystack, String needle) {
+        int m = haystack.length();
+        int n = needle.length();
+        int i = 0;
+        int j = 0;
+        while(i < m && j < n){
+            int k = i;
+            while(k < m && j < n && haystack.charAt(k) == needle.charAt(j)){
+                k++;
+                j++;
+            }
+            if(j == n){
+                return k - n;
+            }else{
+                j = 0;
+            }
+            i++;
+        }
+        return -1;
+    }
+
     static long minimalKSum(int[] nums, int k) {
         long ans = 0L;
         int prev = 0;

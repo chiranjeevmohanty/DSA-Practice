@@ -86,11 +86,13 @@
 
 
 package arrays;
+import java.util.Arrays;
 import java.util.Stack;
 
 public class StepsToMakeArrayNonDecreasing {
     public static void main(String[] args) {
         System.out.println(totalSteps(new int[]{5,3,4,4,7,3,6,11,8,5,11}));
+
     }
 
     //[5,3,4,4,7,3,6,11,8,5,11]
